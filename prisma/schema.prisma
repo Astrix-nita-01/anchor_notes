@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Note {
+  id          String @id @default(cuid())
+  name        String
+  collegeName String
+  semester    String
+  subject     String
+  department  String
+  description String
+  uploadDate  DateTime @default(now())
+  upvotes     Int    @default(0)
+  downvotes   Int    @default(0)
+  comments    Int    @default(0)
+  downloads   Int    @default(0)
+}
