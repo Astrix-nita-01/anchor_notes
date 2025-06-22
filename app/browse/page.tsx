@@ -41,8 +41,8 @@ export default function BrowsePage() {
     }
   }, []);
 
-  const departments = [...new Set(notes.map(note => note.department))].sort();
-  const semesters = [...new Set(notes.map(note => note.semester))].sort();
+  const departments = Array.from(new Set(notes.map(note => note.department))).sort();
+  const semesters = Array.from(new Set(notes.map(note => note.semester))).sort();
 
   const filteredAndSortedNotes = notes
     .filter(note => {

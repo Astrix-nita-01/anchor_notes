@@ -289,7 +289,7 @@ export default function UploadPage() {
                 <Alert>
                   <AlertCircle className="h-4 w-4" />
                   <AlertDescription>
-                    By uploading these notes, you confirm that you have the right to share this content and that it doesn't violate any copyright laws.
+                    By uploading these notes, you confirm that you have the right to share this content and that it {"doesn't"} violate any copyright laws.
                   </AlertDescription>
                 </Alert>
 
